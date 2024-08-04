@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FloatingLabelInput from "./FloatingLabelInput";
-import Logo from "./Logo";
+import FloatingLabelInput from "../helper_components/FloatingLabelInput";
+import Logo from "../helper_components/Logo";
 import { Link } from "react-router-dom";
 
 const Login = () => {

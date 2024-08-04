@@ -5,6 +5,7 @@
 :root {
     --color-primary: #191D38;
     --color-secondary: #0ba8e1;
+    --color-orange: #ff5e2c;
 
 }
 
@@ -43,18 +44,29 @@
     @apply w-full border-b-2 border-gray-100 text-xl mt-4 mb-8
 }
 
-/* ------------------------------------------------Admin----------------------------------------------------- */
+/* ------------------------------------------------Admin Board----------------------------------------------------- */
 
 .admin-container{
     @apply grid grid-cols-12 h-screen bg-gray-100 p-2 gap-4
 }
 .admin-navbar{
-    @apply bg-primary col-span-2 rounded-md py-2 px-4 relative
+    @apply bg-primary col-span-2 rounded-md py-2 px-4 
 }
 .admin-main{
-    @apply bg-white col-span-10 rounded-md
+    @apply bg-transparent col-span-10 rounded-md
+}
+/* ------------------------------------------------Admin Board----------------------------------------------------- */
+.dashboard-container {
+    @apply bg-transparent h-screen mt-4 rounded-xl grid grid-cols-12 gap-4
 }
 
+.dashboard-left {
+    @apply bg-white col-span-3 rounded-xl
+}
+
+.dashboard-right {
+    @apply bg-white col-span-9 rounded-xl
+}
 
 
 
