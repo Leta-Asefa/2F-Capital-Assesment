@@ -19,10 +19,15 @@ module.exports = {
       fontSize: {
         bsm: "0.875rem"
       },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
       boxShadow: {
         'custom': '2px 2px 16px #f3f3f3,  2px 2px  16px #f3f3f3',
       },
     },
+    
   },
   plugins: [],
 }
+// I have started the project. the login and signin pages are done and I'm about to finish the dashboard. I am using React and tailwindcss.

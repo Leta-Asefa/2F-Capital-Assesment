@@ -53,7 +53,7 @@ const Admin = () => {
                 <hr className="my-4"></hr>
                 <DisplayNavItems items={secondBlockItems} />
 
-                <div className="flex justify-center items-end mt-32 mb-4">
+                <div className="flex justify-center items-end mt-96 pt-40 mb-4">
                 <button className="bg-gray-300 bg-opacity-30  flex items-center w-full  justify-center gap-2 p-2 rounded-md">
                     <img src="logout.svg" className="w-5 h-5" alt="logout button" />
                     <h1 className="text-white">Log out</h1>

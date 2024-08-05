@@ -25,7 +25,7 @@ const FloatingLabelInput = ({ label, type, value, onChange, id }) => {
             />
             <label
                 htmlFor={id}
-                className={`text-gray-500 absolute left-3 text-xs top-2 transition-all duration-200 ${isFocused || hasValue ? 'text-bsm -top-3 bg-white   px-1' : ''}`}
+                className={`text-gray-500 absolute left-3 text-xs top-2 transition-all duration-200 ${isFocused || hasValue ? 'text-bsm  bg-white -top-2   px-1' : ''}`}
             >
                 {label}
             </label>

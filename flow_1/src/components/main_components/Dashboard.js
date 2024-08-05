@@ -1,4 +1,7 @@
+import DoughNutChart from "../helper_components/DoughNutChart";
 import Income from "../helper_components/Income";
+import LineChart from "../helper_components/LineChart";
+import LiveBookStatus from "../helper_components/LiveBookStatus";
 
 const Dashboard = () => {
     const now = new Date();
@@ -35,12 +38,13 @@ const Dashboard = () => {
                     <h2 className=" px-4 text-sm text-gray-400">{formatDate(now)}</h2>
                 </div>
 
-                <Income/>
-
+                <Income thismonth="9460.00" lastmonth="25658.00"/>
+                <DoughNutChart/>
 
             </div>
             <div className="dashboard-right">
-
+          <LiveBookStatus />
+          <LineChart/>
             </div>
         </div>
     );
