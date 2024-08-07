@@ -1,6 +1,7 @@
-const LiveBookStatus = ({ data }) => {
-    const images = ['search.svg', 'list-filter.svg', 'verticallines.svg', 'list.svg', 'adjust.svg']
+import DashboardFilters from "./DashboardFilters";
 
+const LiveBookStatus = ({ data }) => {
+  
     const rows = data || [
         {
             no: 1,
@@ -56,14 +57,7 @@ const LiveBookStatus = ({ data }) => {
 
     return (
         <div className="bg-white px-8 rounded-xl">
-            {/* The buttons */}
-            <div className="flex items-center justify-end  pt-10  gap-3">
-                {
-                    images.map(image => {
-                        return <img src={image} className="w-5 h-5" />
-                    })
-                }
-            </div>
+            <DashboardFilters />
 
             {/* The Table */}
             <div className="">
@@ -72,10 +66,10 @@ const LiveBookStatus = ({ data }) => {
 
                     <colgroup>
                         <col style={{ width: "10%" }} />
-                        <col style={{width:"10%"}} />
-                        <col style={{width:"20%"}} />
-                        <col style={{width:"20%"}} />
-                        <col style={{width:"20%"}} />
+                        <col style={{ width: "10%" }} />
+                        <col style={{ width: "20%" }} />
+                        <col style={{ width: "20%" }} />
+                        <col style={{ width: "20%" }} />
                     </colgroup>
 
                     <tr className="text-gray-500 font-extralight text-sm border-b-2 border-gray-100 ">

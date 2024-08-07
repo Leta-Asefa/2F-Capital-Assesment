@@ -1,48 +1,57 @@
-import Dashboard from "./Dashboard";
-import DisplayNavItems from "../helper_components/DisplayNavItems";
-import Logo from "../helper_components/Logo";
 
-const Admin = () => {
+import React from 'react';
+import { Outlet } from 'react-router';
+import DisplayNavItems from '../helper_components/DisplayNavItems';
+import Logo from '../helper_components/Logo';
 
+const AdminLayout = ({ children }) => {
     const firstBlockItems = [
         {
             name: "Dashboard",
-            src: "dashboard.svg"
+            src: "dashboard.svg",
+            link:"/dashboard"
         },
         {
             name: "Books",
-            src: "book.svg"
+            src: "book.svg",
+            link:"/books"
         },
         {
             name: "Owners",
-            src: "owner.svg"
+            src: "owner.svg",
+            link:"/owner"
         },
         {
             name: "Other",
-            src: "other.svg"
+            src: "other.svg",
+            link:"#"
         },
         {
             name: "Other",
-            src: "other.svg"
+            src: "other.svg",
+            link:"#"
         }
     ]
     const secondBlockItems = [
         {
             name: "Notification",
-            src: "notification.svg"
+            src: "notification.svg",
+            link:"#"
         },
         {
             name: "Setting",
-            src: "setting.svg"
+            src: "setting.svg",
+            link:"#"
         },
         {
             name: "Log in as book owner",
-            src: "user.svg"
+            src: "user.svg",
+            link:"#"
         }
     ]
-
-    return (
-        <div className="admin-container">
+  return (
+    <>
+     <div className="admin-container">
             <navbar className="admin-navbar">
                 <div className="flex  gap-3 items-center">
                     <img src="menu.svg" className="w-5 h-5" alt="logo" />
@@ -63,11 +72,12 @@ const Admin = () => {
             </navbar>
 
             <main className="admin-main">
-                <div className="w-full bg-white py-4 px-8 font-bold rounded-xl text-2xl"> Admin / </div>
-                <Dashboard/>
+                <div className="w-full bg-white py-4 mb-5 px-8 font-bold rounded-xl text-2xl"> Admin / </div>
+                <Outlet/>
             </main>
         </div>
-    );
-}
+    </>
+  );
+};
 
-export default Admin;
+export default AdminLayout;

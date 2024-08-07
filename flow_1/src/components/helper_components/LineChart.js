@@ -23,7 +23,7 @@ const data = {
         },
         {
             label: 'Same period last year',
-            data: [160, 60, 160, 260, 160, 60],
+            data: [160, 60, 160, 260, 160, 0],
             borderColor: '#94a3b8',
             backgroundColor: 'rgba(148, 163, 184, 0.1)',
             fill: true,
@@ -42,14 +42,19 @@ const options = {
     scales: {
         x: {
             grid: {
-                display: false,
+                display: true,
             },
             ticks: {
-                color: '#6b7280', // Grey color for the x-axis labels
+                color: '#6b7280',
+                stepSize: 2,
+                autoSkip: false
             },
         },
         y: {
             beginAtZero: true,
+            grid: {
+                display: false,
+            },
             ticks: {
                 color: '#6b7280', // Grey color for the y-axis labels
                 callback: (value) => `${value}k Birr`, // Append "k Birr" to the y-axis labels
@@ -80,7 +85,6 @@ const LineChartComponent = () => (
         <header className="flex gap-5 items-center mb-5">
             <h1 className="text-xl font-semibold text-gray-800">Earning Summary</h1>
             <span className="text-gray-500">Mar 2022 - Oct 2024</span>
-            <input type="date" className="border border-gray-300 rounded p-1" />
         </header>
           
         <Line data={data} options={options} />

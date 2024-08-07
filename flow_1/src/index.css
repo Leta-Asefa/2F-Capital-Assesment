@@ -48,7 +48,7 @@
 
 .admin-container{
     @apply grid grid-cols-12  bg-gray-200 p-2 gap-4;
-    height: 1100px;
+    height: 1110px;
 }
 .admin-navbar{
     @apply bg-primary col-span-2 rounded-md py-2 px-3
